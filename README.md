@@ -43,9 +43,9 @@ yarn test
 ### Project Structure
 
 - **src/**: Contains the source code.
+  - **\_\_tests\_\_/**: Contains the test cases for the project.
   - **lib/intervals.ts**: Contains the main interval processing functions.
   - **types/interval.ts**: Defines the Interval interface and provides utility functions to create intervals.
   - **components/**: Contains the React components for the web interface.
     - **IntervalForm.tsx**: The main form component for inputting intervals.
     - **Result.tsx**: The component for displaying the resulting intervals.
-  - \***\*tests**/\*\*: Contains the test cases for the project.
