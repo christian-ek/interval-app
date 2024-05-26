@@ -1,36 +1,51 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+## Overview
 
-## Getting Started
+This project processes intervals by taking a set of include intervals and a set of exclude intervals to produce a final set of non-overlapping intervals.
 
-First, run the development server:
+## Project Setup
+
+### Prerequisites
+
+- Node.js (>=14.x)
+- Yarn (>=1.x)
+
+### Installation
+
+1. Clone the repository:
+
+   ```bash
+   git clone https://github.com/christian-ek/interval-app.git
+   cd interval-app
+   ```
+
+2. Install dependencies:
+
+   ```bash
+   yarn install
+   ```
+
+### Running the Application
+
+To run the application locally in development mode, use the following command:
 
 ```bash
-npm run dev
-# or
 yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+### Running Tests
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+The project uses Vitest for testing. To run the test suite, use the following command:
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+```bash
+yarn test
+```
 
-## Learn More
+### Project Structure
 
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+- **src/**: Contains the source code.
+  - **lib/intervals.ts**: Contains the main interval processing functions.
+  - **types/interval.ts**: Defines the Interval interface and provides utility functions to create intervals.
+  - **components/**: Contains the React components for the web interface.
+    - **IntervalForm.tsx**: The main form component for inputting intervals.
+    - **Result.tsx**: The component for displaying the resulting intervals.
+  - \***\*tests**/\*\*: Contains the test cases for the project.
