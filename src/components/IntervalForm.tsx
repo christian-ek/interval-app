@@ -97,15 +97,18 @@ export default function IntervalForm() {
   }
 
   return (
-    <div className="flex w-auto flex-col items-center space-y-6">
+    <div className="flex w-full md:w-[600px] flex-col items-center space-y-6 px-4">
       <Form {...form}>
-        <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-6">
-          <div className="flex space-x-4">
+        <form
+          onSubmit={form.handleSubmit(onSubmit)}
+          className="space-y-6 w-full"
+        >
+          <div className="flex flex-col space-y-4 md:flex-row md:space-y-0 md:space-x-4">
             <FormField
               control={form.control}
               name="includes"
               render={({ field }) => (
-                <FormItem className="w-96">
+                <FormItem className="w-full md:w-[300px]">
                   <FormLabel>Included intervals</FormLabel>
                   <FormControl>
                     <Input
@@ -127,7 +130,7 @@ export default function IntervalForm() {
               control={form.control}
               name="excludes"
               render={({ field }) => (
-                <FormItem className="w-96">
+                <FormItem className="w-full md:w-[300px]">
                   <FormLabel>Excluded intervals</FormLabel>
                   <FormControl>
                     <Input
@@ -146,7 +149,9 @@ export default function IntervalForm() {
               )}
             />
           </div>
-          <Button type="submit">Submit</Button>
+          <Button type="submit" className="w-full md:w-auto">
+            Submit
+          </Button>
         </form>
       </Form>
 
